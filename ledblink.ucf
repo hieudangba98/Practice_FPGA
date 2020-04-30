@@ -1,0 +1,2 @@
+NET "clk" LOC= "T8";
+NET "Y" LOC=  "P4";
