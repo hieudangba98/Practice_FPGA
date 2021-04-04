@@ -1,0 +1,112 @@
+//ST1: UP_0_15
+{
+  signal: [
+    {name: 'clk', wave: 'P.....dP...'},
+    {name: 'reset_n', wave: '01....u1...'},
+    {name: 'flick', wave:'0.1.0.d0...'},
+    {name: 'next_state',wave: '8.8...d8..8',data: "3'h0 3'h1 3'h1 3'h2"},
+    {name: 'state',wave: '5..5..d5...',data: "3'h0 3'h1 3'h1"},
+    {name: 'lamp',wave: '3..333d3333',data: "16'h0000 16'h0001 16'h0003 16'h0007 16'h1fff 16'h3fff 16'h7fff 16'hffff"},
+  ],foot: {
+    text: "STATE: INIT to UP_0_15"
+    },
+  config: {hscale:1.5}
+}
+
+//ST2: DOWN_15_5
+{
+  signal: [
+    {name: 'clk', wave: 'P....dP...'},
+    {name: 'reset_n', wave: '1....u1...'},
+    {name: 'flick', wave:'0....d0...'},
+    {name: 'next_state',wave: '88...d8..8',data: "3'h1 3'h2 3'h2 3'h3"},
+    {name: 'state',wave: '5.5..d5...',data: "3'h1 3'h2 3'h2"},
+    {name: 'lamp',wave: '33333d3333',data: "16'h7fff 16'hffff 16'h7fff 16'h3fff 16'h1fff 16'h01ff 16'h00ff 16'h007f 16'h003f"},
+  ],foot: {
+    text: "STATE: INIT to UP_0_15"
+    },
+  config: {hscale:1.5}
+}
+
+//ST3: UP_5_10 and ST4: DOWN_10_0
+{
+  signal: [
+    {name: 'clk', wave: 'P.........'},
+    {name: 'reset_n', wave: '1.........'},
+    {name: 'flick', wave:'0.........'},
+    {name: 'next_state',wave: '88....8...',data: "3'h2 3'h3 3'h4"},
+    {name: 'state',wave: '5.5....5..',data: "3'h2 3'h3 3'h4"},
+    {name: 'lamp',wave: '3333333333',data: "16'h007f 16'h003f 16'h007f 16'h00ff 16'h01ff 16'h03ff 16'h07ff 16'h03ff 16'h01ff 16'h00ff"},
+  ],foot: {
+    text: "STATE: INIT to UP_0_15"
+    },
+  config: {hscale:1.5}
+}
+
+//ST5: UP_5_10 and ST6: DOWN_10_0 and INIT
+{
+  signal: [
+    {name: 'clk', wave: 'P..dP...dP..'},
+    {name: 'reset_n', wave: '1..u1...u1..'},
+    {name: 'flick', wave:'0..d0...d0..'},
+    {name: 'next_state',wave: '88.d88..d88.',data: "3'h4 3'h5 3'h5 3'h6 3'h6 3'h0"},
+    {name: 'state',wave: '5.5d5.5.d5.5',data: "3'h4 3'h5 3'h5 3'h6 3'h6 3'h0"},
+    {name: 'lamp',wave: '333d3333d33.',data: "16'h0001 16'h0000 16'h0001 16'h001f 16'h003f 16'h001f 16'h000f 16'h0001 16'h0000"},
+  ],foot: {
+    text: "STATE: INIT to UP_0_15"
+    },
+  config: {hscale:1.5}
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+//ST2: KICK-BACKPOINT AT lamp[5]
+{
+  signal: [
+    {name: 'clk', wave: 'P....dP...'},
+    {name: 'reset_n', wave: '1....u1...'},
+    {name: 'flick', wave:'01.0.d0...'},
+    {name: 'next_state',wave: '88...d8..8',data: "3'h2 3'h1 3'h1 3'h2"},
+    {name: 'state',wave: '5.5..d5...',data: "3'h2 3'h1 3'h1"},
+    {name: 'lamp',wave: '33333d3333',data: " 16'h007f 16'h003f 16'h007f 16'h00ff 01ff 16'h1fff 16'h3fff 16'7fff 16'hffff"},
+  ],foot: {
+    text: "STATE: INIT to UP_0_15"
+    },
+  config: {hscale:1.5}
+}
+
+//ST4: KICK-BACKPOINT AT lamp[0]
+{
+  signal: [
+    {name: 'clk', wave: 'P....dP...'},
+    {name: 'reset_n', wave: '1....u1...'},
+    {name: 'flick', wave:'01.0.d0...'},
+    {name: 'next_state',wave: '88...d8..8',data: "3'h4 3'h3 3'h3 3'h4"},
+    {name: 'state',wave: '5.5..d5...',data: "3'h4 3'h3 3'h3"},
+    {name: 'lamp',wave: '33333d3333',data: "16'h0001 16'h0000 16'h0001 16'h0003 16'h0007 16'h007f 16'h00ff 16'h01ff 16'03ff"},
+  ],foot: {
+    text: "STATE: INIT to UP_0_15"
+    },
+  config: {hscale:1.5}
+}
+
+//ST4: KICK-BACKPOINT AT lamp[5]
+{
+  signal: [
+    {name: 'clk', wave: 'P....dP...'},
+    {name: 'reset_n', wave: '1....u1...'},
+    {name: 'flick', wave:'01.0.d0...'},
+    {name: 'next_state',wave: '88...d8..8',data: "3'h4 3'h3 3'h3 3'h4"},
+    {name: 'state',wave: '5.5..d5...',data: "3'h4 3'h3 3'h3"},
+    {name: 'lamp',wave: '33333d3333',data: "16'h007f 16'h003f 16'h007f 16'h00ff 16'h01ff 16'h007f 16'h00ff 16'h01ff 16'03ff"},
+  ],foot: {
+    text: "STATE: INIT to UP_0_15"
+    },
+  config: {hscale:1.5}
+}    
+
+
+    
+    
+    
