@@ -1,0 +1,25 @@
+//POR and RWIF
+{
+  signal: [
+    {name: 'clk', wave: 'P.........'},
+    {name: 'rst_n', wave: '01......01'},
+    {name: 'new_buf_req', wave:'0...1010..'},
+    {name: 'ref_buf_numbr',wave: '33333.3.33',data: "2'b00 2'b01 2'b10 2b00 2'b11 2'b00 2'b11 2'b00"},
+    {name: 'access_time[7:0]',wave: '4444.4.444',data: "8'b0101_0101 0101_1001 0110_1001 0110_1010 10101010 10101011 01010101 0101_0110"},
+    {name: 'buf_numbr_replc',wave: '5...5.5...',data: "2'b00 2'b11 2'b00"},
+  ],
+  config: {hscale:1.5}
+}
+
+//Normal
+{
+  signal: [
+    {name: 'clk', wave: 'P.......'},
+    {name: 'rst_n', wave: '01......'},
+    {name: 'new_buf_req', wave:'0...1010'},
+    {name: 'ref_buf_numbr',wave: '33333.3.',data: "2'b00 2'b01 2'b10 2b00 2'b11 2'b00 2'b11 2'b00"},
+    {name: 'access_time[7:0]',wave: '4444.4.4',data: "8'b0101_0101 0101_1001 0110_1001 0110_1010 10101010 10101011 01010101 0101_0110"},
+    {name: 'buf_numbr_replc',wave: '5...5.5.',data: "2'b00 2'b11 2'b00"},
+  ],
+  config: {hscale:1.5}
+}
